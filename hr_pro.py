@@ -14,7 +14,7 @@ class Employee:
         return date.today().year - self.hiredate
     
     def __str__(self):
-        return "Name: {}, Age: {}, Salary: {}, years_worked: {}".format(self.name, self.age, self.salary, self.total_years())
+        return "Name: {}, Age: {}, Salary: {}, working years: {}".format(self.name, self.age, self.salary, self.total_years())
     
     
 class Manager(Employee):
@@ -27,7 +27,7 @@ class Manager(Employee):
     
     
     def __str__(self):
-        return "Name:{}, age:{}, salary:{}, hiredate:{}, bonus: {}".format(self.name, self.age, self.salary, self.hiredate,self.get_bonus())
+        return "Name:{}, age:{}, salary:{}, Working Years:{}, bonus: {}".format(self.name, self.age, self.salary, self.total_years(),self.get_bonus())
     
     
 menu = ["Show Employees", "Show Managers", "Add an Employee","Add a Manager", "Exit"]
